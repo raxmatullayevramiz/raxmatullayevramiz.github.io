@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pad: 5px;
+    --kenglik: calc(405px);
+    --balandlik: calc(45px);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    padding: 5px;
+    background-color: red;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.anim1 {
+    width: 405px;
+    height: 45px;
+    display: inline-block;
+    padding: 5px;
+    background: red;
+    color: yellow;
+    font-size: 30px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    position: relative;
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.anim1 {
+    animation: animatsiya 15s linear infinite;
+    -webkit-animation: animatsiya 15s linear infinite;
+}
+
+@keyframes animatsiya {
+    0%,
+    100% {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    12.5% {
+        left: calc(55% - var(--kenglik));
+        top: calc(50% - var(--balandlik));
+    }
+    25% {
+        left: calc(100% - var(--kenglik));
+        top: calc(3% - var(--balandlik));
+    }
+    37.5% {
+        left: calc(55% - var(--kenglik));
+        top: calc(50% - var(--balandlik));
+    }
+    50% {
+        left: calc(100% - var(--kenglik));
+        top: calc(100% - var(--balandlik));
+    }
+    62.5% {
+        left: calc(55% - var(--kenglik));
+        top: calc(50% - var(--balandlik));
+    }
+    75% {
+        left: calc(19.5% - var(--kenglik));
+        top: calc(100% - var(--balandlik));
+    }
+    87.5% {
+        left: calc(55% - var(--kenglik));
+        top: calc(50% - var(--balandlik));
+    }
+    100% {
+        backdrop-filter: blur(5px);
+        filter: hue-rotate(720deg);
+        -webkit-filter: hue-rotate(360deg);
+    }
+}
